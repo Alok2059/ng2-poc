@@ -1,20 +1,12 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { AppComponent }   from './app.component';
+import {EmployeeComponent} from './employee-list.component';
 import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-
+import {FetchJsonPipe} from './fetch-json.pipe';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule,HttpModule ],
+  declarations: [ AppComponent,EmployeeComponent,FetchJsonPipe ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

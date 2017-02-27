@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-
+import{Employeeservice} from'./employee.service';
+import {FetchJsonPipe} from './fetch-json.pipe';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'my-app',
+  template: '<employee-list></employee-list>',
+  providers:[FetchJsonPipe]
 })
-export class AppComponent {
-  title = 'app works!';
+export class AppComponent { 
+
 }
